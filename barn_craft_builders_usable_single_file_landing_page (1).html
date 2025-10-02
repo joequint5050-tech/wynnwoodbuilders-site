@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wynnwood Builders – Premium Pole Barn Construction</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Feather icons (only load once) -->
+  <script defer src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .font-roboto { font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
+
+    .barn-texture {
+      background-image: url('https://images.unsplash.com/photo-1523419409543-a5464b8b0c9a?q=80&w=1920&auto=format&fit=crop');
+      background-size: cover; background-position: center;
+    }
+    .hero-pattern {
+      background-image: radial-gradient(rgba(0,0,0,0.18) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+  </style>
+</head>
+<body class="font-roboto bg-amber-50 antialiased">
+  <!-- Navigation -->
+  <nav class="bg-amber-900 text-amber-50 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#top" class="flex items-center space-x-3" aria-label="Wynnwood Builders home">
+          <i data-feather="tool" class="text-amber-300"></i>
+          <span class="font-playfair text-xl font-bold">Wynnwood Builders</span>
+        </a>
+
+        <!-- Desktop -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#services" class="hover:text-amber-200 transition">Services</a>
+          <a href="#gallery" class="hover:text-amber-200 transition">Gallery</a>
+          <a href="#about" class="hover:text-amber-200 transition">About</a>
+          <a href="#contact" class="hover:text-amber-200 transition">Contact</a>
+          <a href="#quote" class="bg-amber-700 hover:bg-amber-600 px-4 py-2 rounded-lg transition font-medium">Free Quote</a>
+        </div>
+
+        <!-- Mobile -->
+        <button id="menuBtn" class="md:hidden focus:outline-none" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden mt-4 space-y-2">
+        <a href="#services" class="block py-2 border-t border-amber-800">Services</a>
+        <a href="#gallery" class="block py-2">Gallery</a>
+        <a href="#about" class="block py-2">About</a>
+        <a href="#contact" class="block py-2">Contact</a>
+        <a href="#quote" class="block py-2 font-semibold text-amber-900 bg-amber-200 rounded-lg px-4">Free Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="relative h-[90vh] min-h-[560px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 barn-texture opacity-25" aria-hidden="true"></div>
+    <div class="absolute inset-0 hero-pattern" aria-hidden="true"></div>
+
+    <div class="container mx-auto px-6 z-10 text-center">
+      <h1 class="font-playfair text-5xl md:text-7xl font-bold text-amber-900 mb-6">Build Your Dream Pole Barn</h1>
+      <p class="text-lg md:text-2xl text-amber-800 mb-10 max-w-3xl mx-auto">Quality craftsmanship meets rustic charm. Custom pole barns built to last generations.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#quote" class="inline-block bg-amber-700 hover:bg-amber-600 text-amber-50 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105">Get Started</a>
+        <a href="#gallery" class="inline-block border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-amber-50 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105">View Gallery</a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-6 left-0 right-0 text-center" aria-hidden="true">
+      <i data-feather="chevron-down" class="animate-bounce text-amber-900 w-10 h-10 mx-auto"></i>
+    </div>
+  </header>
+
+  <!-- Features / Services -->
+  <section id="services" class="py-20 bg-amber-100">
+    <div class="container mx-auto px-6">
+      <h2 class="font-playfair text-4xl font-bold text-center text-amber-900 mb-16">Why Choose Our Barn Builds</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:scale-[1.02] transition">
+          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+            <i data-feather="shield" class="text-amber-800 w-10 h-10"></i>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-amber-900 mb-2">Durable Construction</h3>
+          <p class="text-amber-800">Built with premium materials to withstand the elements for decades.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:scale-[1.02] transition">
+          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+            <i data-feather="ruler" class="text-amber-800 w-10 h-10"></i>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-amber-900 mb-2">Custom Designs</h3>
+          <p class="text-amber-800">Tailored to your specific needs, from storage to livestock housing.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:scale-[1.02] transition">
+          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+            <i data-feather="award" class="text-amber-800 w-10 h-10"></i>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-amber-900 mb-2">Expert Craftsmanship</h3>
+          <p class="text-amber-800">Skilled artisans with generations of barn-building experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section id="gallery" class="py-20 bg-amber-50">
+    <div class="container mx-auto px-6">
+      <h2 class="font-playfair text-4xl font-bold text-center text-amber-900 mb-6">Our Barn Portfolio</h2>
+      <p class="text-center text-amber-800 max-w-2xl mx-auto mb-12">Explore recent pole barn projects showcasing quality and versatility.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <figure class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1502216173-b41bfa77f13d?q=80&w=1200&auto=format&fit=crop" alt="Classic red barn exterior" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
+          <figcaption class="absolute inset-0 bg-gradient-to-t from-amber-900/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div>
+              <h3 class="font-playfair text-xl font-bold text-amber-50">Classic Red Barn</h3>
+              <p class="text-amber-200">40' × 60' Storage Barn</p>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- Card 2 -->
+        <figure class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1524567497590-9671ab9158dc?q=80&w=1200&auto=format&fit=crop" alt="Open equipment shelter structure" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
+          <figcaption class="absolute inset-0 bg-gradient-to-t from-amber-900/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div>
+              <h3 class="font-playfair text-xl font-bold text-amber-50">Equipment Shelter</h3>
+              <p class="text-amber-200">60' × 100' Pole Barn</p>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- Card 3 -->
+        <figure class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?q=80&w=1200&auto=format&fit=crop" alt="Modern workshop interior with wood" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
+          <figcaption class="absolute inset-0 bg-gradient-to-t from-amber-900/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div>
+              <h3 class="font-playfair text-xl font-bold text-amber-50">Modern Workshop</h3>
+              <p class="text-amber-200">30' × 40' with Lean-to</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#contact" class="inline-block border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-amber-50 px-8 py-3 rounded-lg font-bold transition">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-amber-800 text-amber-50">
+    <div class="container mx-auto px-6">
+      <h2 class="font-playfair text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial -->
+        <article class="bg-amber-700/90 p-8 rounded-xl">
+          <p class="mb-4 text-2xl leading-none" aria-hidden="true">★★★★★</p>
+          <p class="mb-6 italic">“Wynnwood Builders built us a beautiful 50×80 pole barn that exceeded our expectations. The attention to detail was remarkable.”</p>
+          <div class="flex items-center">
+            <div class="bg-amber-600 w-12 h-12 rounded-full mr-4"></div>
+            <div>
+              <h3 class="font-bold">John D.</h3>
+              <p class="text-amber-200 text-sm">Livestock Farmer</p>
+            </div>
+          </div>
+        </article>
+        <article class="bg-amber-700/90 p-8 rounded-xl">
+          <p class="mb-4 text-2xl leading-none" aria-hidden="true">★★★★★</p>
+          <p class="mb-6 italic">“Our custom workshop barn was completed ahead of schedule and under budget. Couldn't be happier with the results!”</p>
+          <div class="flex items-center">
+            <div class="bg-amber-600 w-12 h-12 rounded-full mr-4"></div>
+            <div>
+              <h3 class="font-bold">Sarah M.</h3>
+              <p class="text-amber-200 text-sm">Woodworking Business</p>
+            </div>
+          </div>
+        </article>
+        <article class="bg-amber-700/90 p-8 rounded-xl">
+          <p class="mb-4 text-2xl leading-none" aria-hidden="true">★★★★★</p>
+          <p class="mb-6 italic">“The team was professional from start to finish. Our equipment barn is solid and looks great on our property.”</p>
+          <div class="flex items-center">
+            <div class="bg-amber-600 w-12 h-12 rounded-full mr-4"></div>
+            <div>
+              <h3 class="font-bold">Robert T.</h3>
+              <p class="text-amber-200 text-sm">Horse Stable Owner</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="quote" class="py-20 bg-amber-900 text-amber-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="font-playfair text-4xl font-bold mb-4">Ready to Build Your Perfect Barn?</h2>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">Get a free consultation and quote from our barn-building experts today.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-500 text-amber-50 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105">Get Your Free Quote</a>
+        <a href="tel:+18323350930" class="inline-block border-2 border-amber-50 text-amber-50 hover:bg-amber-50 hover:text-amber-900 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105">Call Us: 832-335-0930</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-amber-950 text-amber-200 py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="font-playfair text-xl font-bold text-amber-50 mb-4">Wynnwood Builders</h3>
+          <p class="mb-4">Quality pole barn construction since 1995.</p>
+          <div class="flex space-x-4" aria-label="Social links">
+            <a href="#" class="hover:text-amber-50 transition" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            <a href="#" class="hover:text-amber-50 transition" aria-label="Instagram"><i data-feather="instagram"></i></a>
+            <a href="#" class="hover:text-amber-50 transition" aria-label="Twitter"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-amber-50 mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#top" class="hover:text-amber-50 transition">Home</a></li>
+            <li><a href="#services" class="hover:text-amber-50 transition">Services</a></li>
+            <li><a href="#gallery" class="hover:text-amber-50 transition">Gallery</a></li>
+            <li><a href="#about" class="hover:text-amber-50 transition">About Us</a></li>
+            <li><a href="#contact" class="hover:text-amber-50
