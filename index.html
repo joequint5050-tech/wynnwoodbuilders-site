@@ -8,8 +8,7 @@
 
   <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Feather icons (only load once) -->
+  <!-- Feather icons -->
   <script defer src="https://unpkg.com/feather-icons"></script>
 
   <!-- Fonts -->
@@ -17,29 +16,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
- <style>
-  .font-playfair { font-family: 'Playfair Display', serif; }
-  .font-roboto { font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
+  <style>
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .font-roboto { font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
 
-  /* Hero background */
-  .barn-texture {
-    background-image: url('assets/img/hero.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Dotted overlay pattern */
-  .hero-pattern {
-    background-image: radial-gradient(rgba(0,0,0,0.18) 1px, transparent 1px);
-    background-size: 16px 16px;
-  }
-</style>
-
+    /* HERO BACKGROUND — use your own image */
+    .barn-texture {
+      background-image: url('assets/img/hero.jpg'); /* <- do not duplicate this image in projects */
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-pattern {
+      background-image: radial-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+  </style>
 </head>
 <body class="font-roboto bg-amber-50 antialiased">
   <!-- Navigation -->
   <nav class="bg-amber-900 text-amber-50 shadow-lg sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4">
+    <div class="max-w-7xl mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
         <a href="#top" class="flex items-center space-x-3" aria-label="Wynnwood Builders home">
           <i data-feather="tool" class="text-amber-300"></i>
@@ -49,8 +45,7 @@
         <!-- Desktop -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="#services" class="hover:text-amber-200 transition">Services</a>
-          <a href="#gallery" class="hover:text-amber-200 transition">Gallery</a>
-          <a href="#about" class="hover:text-amber-200 transition">About</a>
+          <a href="#projects" class="hover:text-amber-200 transition">Projects</a>
           <a href="#contact" class="hover:text-amber-200 transition">Contact</a>
           <a href="#quote" class="bg-amber-700 hover:bg-amber-600 px-4 py-2 rounded-lg transition font-medium">Free Quote</a>
         </div>
@@ -64,188 +59,91 @@
       <!-- Mobile menu -->
       <div id="mobileMenu" class="md:hidden hidden mt-4 space-y-2">
         <a href="#services" class="block py-2 border-t border-amber-800">Services</a>
-        <a href="#gallery" class="block py-2">Gallery</a>
-        <a href="#about" class="block py-2">About</a>
+        <a href="#projects" class="block py-2">Projects</a>
         <a href="#contact" class="block py-2">Contact</a>
         <a href="#quote" class="block py-2 font-semibold text-amber-900 bg-amber-200 rounded-lg px-4">Free Quote</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header id="top" class="relative h-[90vh] min-h-[560px] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 barn-texture opacity-25" aria-hidden="true"></div>
-    <div class="absolute inset-0 hero-pattern" aria-hidden="true"></div>
+  <!-- Hero (single image only) -->
+  <header id="top" class="relative h-[88vh] min-h-[560px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 barn-texture" aria-hidden="true"></div>
+    <div class="absolute inset-0 hero-pattern opacity-70" aria-hidden="true"></div>
 
-    <div class="container mx-auto px-6 z-10 text-center">
-      <h1 class="font-playfair text-5xl md:text-7xl font-bold text-amber-900 mb-6">Build Your Dream Pole Barn</h1>
-      <p class="text-lg md:text-2xl text-amber-800 mb-10 max-w-3xl mx-auto">Quality craftsmanship meets rustic charm. Custom pole barns built to last generations.</p>
+    <div class="relative z-10 text-center px-6">
+      <h1 class="font-playfair text-5xl md:text-7xl font-bold text-white drop-shadow mb-6">Build Your Dream Pole Barn</h1>
+      <p class="text-lg md:text-2xl text-amber-50/95 mb-10 max-w-3xl mx-auto drop-shadow">Quality craftsmanship, custom designs, built to last.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="#quote" class="inline-block bg-amber-700 hover:bg-amber-600 text-amber-50 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105">Get Started</a>
-        <a href="#gallery" class="inline-block border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-amber-50 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105">View Gallery</a>
+        <a href="#projects" class="inline-block border-2 border-amber-50 text-amber-50 hover:bg-amber-50 hover:text-amber-900 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105">See Projects</a>
       </div>
-    </div>
-
-    <div class="absolute bottom-6 left-0 right-0 text-center" aria-hidden="true">
-      <i data-feather="chevron-down" class="animate-bounce text-amber-900 w-10 h-10 mx-auto"></i>
     </div>
   </header>
 
-  <!-- Features / Services -->
+  <!-- Services -->
   <section id="services" class="py-20 bg-amber-100">
-    <div class="container mx-auto px-6">
-      <h2 class="font-playfair text-4xl font-bold text-center text-amber-900 mb-16">Why Choose Our Barn Builds</h2>
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-playfair text-4xl font-bold text-center text-amber-900 mb-12">What We Do</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:scale-[1.02] transition">
-          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
-            <i data-feather="shield" class="text-amber-800 w-10 h-10"></i>
-          </div>
+          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"><i data-feather="shield" class="text-amber-800 w-10 h-10"></i></div>
           <h3 class="font-playfair text-xl font-bold text-amber-900 mb-2">Durable Construction</h3>
-          <p class="text-amber-800">Built with premium materials to withstand the elements for decades.</p>
+          <p class="text-amber-800">Premium materials engineered to withstand decades of weather.</p>
         </div>
         <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:scale-[1.02] transition">
-          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
-            <i data-feather="ruler" class="text-amber-800 w-10 h-10"></i>
-          </div>
+          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"><i data-feather="ruler" class="text-amber-800 w-10 h-10"></i></div>
           <h3 class="font-playfair text-xl font-bold text-amber-900 mb-2">Custom Designs</h3>
-          <p class="text-amber-800">Tailored to your specific needs, from storage to livestock housing.</p>
+          <p class="text-amber-800">Storage, workshops, livestock—tailored to your needs and site.</p>
         </div>
         <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:scale-[1.02] transition">
-          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
-            <i data-feather="award" class="text-amber-800 w-10 h-10"></i>
-          </div>
+          <div class="bg-amber-200 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"><i data-feather="award" class="text-amber-800 w-10 h-10"></i></div>
           <h3 class="font-playfair text-xl font-bold text-amber-900 mb-2">Expert Craftsmanship</h3>
-          <p class="text-amber-800">Skilled artisans with generations of barn-building experience.</p>
+          <p class="text-amber-800">Experienced crews with precision fit and finish on every build.</p>
         </div>
       </div>
     </div>
   </section>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- Projects (fresh, uses your uploaded files; excludes hero.jpg) -->
+  <section id="projects" class="py-20 bg-amber-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-playfair text-4xl font-bold text-center text-amber-900 mb-6">Our Barn Portfolio</h2>
+      <p class="text-center text-amber-800 max-w-2xl mx-auto mb-12">A few recent builds. Click to enlarge.</p>
 
-  <figure class="relative group overflow-hidden rounded-xl">
-    <img src="assets/img/gallery-2.jpg" alt="Barn Project 1"
-         class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
-  </figure>
-
-  <figure class="relative group overflow-hidden rounded-xl">
-    <img src="assets/img/gallery-3.jpg" alt="Barn Project 2"
-         class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
-  </figure>
-
-  <figure class="relative group overflow-hidden rounded-xl">
-    <img src="assets/img/gallery-4.jpg" alt="Barn Project 3"
-         class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
-  </figure>
-
-  <figure class="relative group overflow-hidden rounded-xl">
-    <img src="assets/img/gallery-5.jpg" alt="Barn Project 4"
-         class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
-  </figure>
-
-  <figure class="relative group overflow-hidden rounded-xl">
-    <img src="assets/img/gallery-6.jpg" alt="Barn Project 5"
-         class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
-  </figure>
-
-</div>
-
- <!-- Gallery Preview -->
-<section id="gallery" class="py-20 bg-amber-50">
-  <div class="container mx-auto px-6">
-    <h2 class="font-playfair text-4xl font-bold text-center text-amber-900 mb-6">Our Barn Portfolio</h2>
-    <p class="text-center text-amber-800 max-w-2xl mx-auto mb-12">
-      Explore some of our recent barn projects showcasing quality and versatility.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Gallery Item 1 -->
-      <figure class="relative group overflow-hidden rounded-xl">
-        <img src="assets/img/gallery-1.jpg" alt="Custom Pole Barn Project"
-             class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
-        <figcaption class="absolute inset-0 bg-gradient-to-t from-amber-900/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
-          <div>
-            <h3 class="font-playfair text-xl font-bold text-amber-50">Project 1</h3>
-            <p class="text-amber-200">Custom build</p>
-          </div>
-        </figcaption>
-      </figure>
-
-      <!-- Gallery Item 2 -->
-      <figure class="relative group overflow-hidden rounded-xl">
-        <img src="assets/img/gallery-2.jpg" alt="Workshop Barn"
-             class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
-        <figcaption class="absolute inset-0 bg-gradient-to-t from-amber-900/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
-          <div>
-            <h3 class="font-playfair text-xl font-bold text-amber-50">Project 2</h3>
-            <p class="text-amber-200">Workshop build</p>
-          </div>
-        </figcaption>
-      </figure>
-
-      <!-- Gallery Item 3 -->
-      <figure class="relative group overflow-hidden rounded-xl">
-        <img src="assets/img/gallery-3.jpg" alt="Livestock Barn"
-             class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" />
-        <figcaption class="absolute inset-0 bg-gradient-to-t from-amber-900/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
-          <div>
-            <h3 class="font-playfair text-xl font-bold text-amber-50">Project 3</h3>
-            <p class="text-amber-200">Livestock housing</p>
-          </div>
-        </figcaption>
-      </figure>
-
-    </div>
-  </div>
-</section>
-  <!-- Testimonials -->
-  <section class="py-20 bg-amber-800 text-amber-50">
-    <div class="container mx-auto px-6">
-      <h2 class="font-playfair text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Testimonial -->
-        <article class="bg-amber-700/90 p-8 rounded-xl">
-          <p class="mb-4 text-2xl leading-none" aria-hidden="true">★★★★★</p>
-          <p class="mb-6 italic">“Wynnwood Builders built us a beautiful 50×80 pole barn that exceeded our expectations. The attention to detail was remarkable.”</p>
-          <div class="flex items-center">
-            <div class="bg-amber-600 w-12 h-12 rounded-full mr-4"></div>
-            <div>
-              <h3 class="font-bold">John D.</h3>
-              <p class="text-amber-200 text-sm">Livestock Farmer</p>
-            </div>
-          </div>
-        </article>
-        <article class="bg-amber-700/90 p-8 rounded-xl">
-          <p class="mb-4 text-2xl leading-none" aria-hidden="true">★★★★★</p>
-          <p class="mb-6 italic">“Our custom workshop barn was completed ahead of schedule and under budget. Couldn't be happier with the results!”</p>
-          <div class="flex items-center">
-            <div class="bg-amber-600 w-12 h-12 rounded-full mr-4"></div>
-            <div>
-              <h3 class="font-bold">Sarah M.</h3>
-              <p class="text-amber-200 text-sm">Woodworking Business</p>
-            </div>
-          </div>
-        </article>
-        <article class="bg-amber-700/90 p-8 rounded-xl">
-          <p class="mb-4 text-2xl leading-none" aria-hidden="true">★★★★★</p>
-          <p class="mb-6 italic">“The team was professional from start to finish. Our equipment barn is solid and looks great on our property.”</p>
-          <div class="flex items-center">
-            <div class="bg-amber-600 w-12 h-12 rounded-full mr-4"></div>
-            <div>
-              <h3 class="font-bold">Robert T.</h3>
-              <p class="text-amber-200 text-sm">Horse Stable Owner</p>
-            </div>
-          </div>
-        </article>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Do NOT include assets/img/hero.jpg here -->
+        <figure class="relative group overflow-hidden rounded-xl bg-white shadow">
+          <img src="assets/img/gallery-2.jpg" alt="Workshop build" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105 cursor-zoom-in" />
+        </figure>
+        <figure class="relative group overflow-hidden rounded-xl bg-white shadow">
+          <img src="assets/img/gallery-3.jpg" alt="Equipment shelter" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105 cursor-zoom-in" />
+        </figure>
+        <figure class="relative group overflow-hidden rounded-xl bg-white shadow">
+          <img src="assets/img/gallery-4.jpg" alt="Modern workshop" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105 cursor-zoom-in" />
+        </figure>
+        <figure class="relative group overflow-hidden rounded-xl bg-white shadow">
+          <img src="assets/img/gallery-5.jpg" alt="Custom pole barn" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105 cursor-zoom-in" />
+        </figure>
+        <figure class="relative group overflow-hidden rounded-xl bg-white shadow">
+          <img src="assets/img/gallery-6.jpg" alt="Livestock barn" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105 cursor-zoom-in" />
+        </figure>
       </div>
     </div>
+
+    <!-- Lightbox dialog for projects -->
+    <dialog id="lightbox" class="backdrop:bg-black/70 p-0 rounded-xl overflow-hidden">
+      <img id="lightImg" alt="" class="max-w-[90vw] max-h-[85vh] block">
+      <div class="flex justify-between items-center p-3 bg-amber-900 text-amber-50">
+        <div class="text-sm" id="lightCaption"></div>
+        <button id="closeBtn" class="px-3 py-1 bg-amber-700 rounded-lg">Close</button>
+      </div>
+    </dialog>
   </section>
 
   <!-- CTA -->
   <section id="quote" class="py-20 bg-amber-900 text-amber-50">
-    <div class="container mx-auto px-6 text-center">
+    <div class="max-w-7xl mx-auto px-6 text-center">
       <h2 class="font-playfair text-4xl font-bold mb-4">Ready to Build Your Perfect Barn?</h2>
       <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">Get a free consultation and quote from our barn-building experts today.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -257,7 +155,7 @@
 
   <!-- Footer -->
   <footer id="contact" class="bg-amber-950 text-amber-200 py-12">
-    <div class="container mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h3 class="font-playfair text-xl font-bold text-amber-50 mb-4">Wynnwood Builders</h3>
@@ -273,6 +171,64 @@
           <ul class="space-y-2">
             <li><a href="#top" class="hover:text-amber-50 transition">Home</a></li>
             <li><a href="#services" class="hover:text-amber-50 transition">Services</a></li>
-            <li><a href="#gallery" class="hover:text-amber-50 transition">Gallery</a></li>
-            <li><a href="#about" class="hover:text-amber-50 transition">About Us</a></li>
-            <li><a href="#contact" class="hover:text-amber-50
+            <li><a href="#projects" class="hover:text-amber-50 transition">Projects</a></li>
+            <li><a href="#quote" class="hover:text-amber-50 transition">Free Quote</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-amber-50 mb-4">Service Area</h3>
+          <ul class="space-y-2">
+            <li>Greater Houston</li>
+            <li>Montgomery County</li>
+            <li>Surrounding Texas areas</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-amber-50 mb-4">Contact</h3>
+          <p>Phone: <a class="underline hover:text-amber-50" href="tel:+18323350930">832-335-0930</a></p>
+          <p>Email: <a class="underline hover:text-amber-50" href="mailto:info@wynnwoodbuilders.com">info@wynnwoodbuilders.com</a></p>
+        </div>
+      </div>
+      <div class="border-t border-amber-800 mt-12 pt-8 text-center text-sm">© <span id="year"></span> Wynnwood Builders. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Icons
+    feather.replace();
+
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple lightbox for project images
+    (function () {
+      const dlg = document.getElementById('lightbox');
+      const img = document.getElementById('lightImg');
+      const cap = document.getElementById('lightCaption');
+      document.querySelectorAll('#projects img').forEach(el => {
+        el.addEventListener('click', () => {
+          img.src = el.src;
+          img.alt = el.alt || '';
+          cap.textContent = el.alt || '';
+          if (!dlg.open) dlg.showModal();
+        });
+      });
+      document.getElementById('closeBtn').addEventListener('click', () => dlg.close());
+      dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && dlg.open) dlg.close(); });
+    })();
+  </script>
+</body>
+</html>
+
